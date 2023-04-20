@@ -1,4 +1,4 @@
-const buttonData = require('./button-data.js');
+import { buttonData } from './buttonData.js';
 
 const container = document.getElementById('button-container');
 

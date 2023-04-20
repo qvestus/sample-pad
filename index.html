@@ -15,11 +15,7 @@
     <meta name="twitter:description" content="An audio sample pad web app">
     <meta name="twitter:image" content="https://yourusername.github.io/audio-sample-pad/images/sample-pad.png">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
-    <script src="confetti.min.js"></script>
-    <script src="app.js"></script>
-
-
+    <script src="scripts.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -27,80 +23,6 @@
         <p class="intro">An audio sample pad web app where you can trigger different sounds by clicking on the buttons below.</p>
       </header>
       
-    <div class="container">
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/alsaker.jpg    " alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <button class="button" onclick="playSound('audio/sound1.mp3')">
-            <div class="button-content">
-                <img src="images/image1.png" alt="Image 1">
-                <span class="button-label">Sound 1</span>
-            </div>
-        </button>
-        <!-- Repeat the above button structure for the other 11 buttons, updating the file paths and text labels accordingly -->
-    </div>
+      <div class="container" id="button-container">
 </body>
 </html>

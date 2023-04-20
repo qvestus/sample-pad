@@ -23,8 +23,3 @@ buttonData.forEach((button) => {
   buttonElement.appendChild(buttonContent);
   container.appendChild(buttonElement);
 });
-
-function playSound(soundSrc) {
-  const audio = new Audio(soundSrc);
-  audio.play();
-}

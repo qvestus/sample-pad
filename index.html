@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio Sample Pad</title>
+    <meta name="description" content="An audio sample pad web app">
+    <meta property="og:title" content="Audio Sample Pad">
+    <meta property="og:description" content="An audio sample pad web app">
+    <meta property="og:image" content="https://yourusername.github.io/audio-sample-pad/images/sample-pad.png">
+    <meta property="og:url" content="https://yourusername.github.io/audio-sample-pad/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Audio Sample Pad">
+    <meta name="twitter:description" content="An audio sample pad web app">
+    <meta name="twitter:image" content="https://yourusername.github.io/audio-sample-pad/images/sample-pad.png">
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
+    <script src="confetti.min.js"></script>
+    <script src="app.js"></script>
+
+
 </head>
 <body>
+    <header>
+        <h1 class="title">Du kommenterer!</h1>
+        <p class="intro">An audio sample pad web app where you can trigger different sounds by clicking on the buttons below.</p>
+      </header>
+      
     <div class="container">
         <button class="button" onclick="playSound('audio/sound1.mp3')">
             <div class="button-content">
-                <img src="images/alsaker.jpg" alt="Image 1">
+                <img src="images/alsaker.jpg    " alt="Image 1">
                 <span class="button-label">Sound 1</span>
             </div>
         </button>

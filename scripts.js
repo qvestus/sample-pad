@@ -1,34 +1,32 @@
 import { buttonData } from './buttonData.js';
 
-const container = document.getElementById('button-container');
+const container = document.querySelector('#button-container');
+
+const buttonTemplate = ({ imgSrc, label }) => `
+  <button class="button">
+    <div class="button-content">
+      <img src="${imgSrc}" alt="${label}">
+      <span class="button-label">${label}</span>
+    </div>
+  </button>
+`;
 
 buttonData.forEach((button) => {
-  const buttonElement = document.createElement('button');
-  buttonElement.classList.add('button');
-  buttonElement.addEventListener('click', () => playSound(button.soundSrc));
+  const buttonElement = document.createRange().createContextualFragment(buttonTemplate(button)).querySelector('button');
+  
+  buttonElement.addEventListener('click', () => playSound(button));
 
-  const buttonContent = document.createElement('div');
-  buttonContent.classList.add('button-content');
-
-  const imgElement = document.createElement('img');
-  imgElement.src = button.imgSrc;
-  imgElement.alt = button.label;
-
-  const labelElement = document.createElement('span');
-  labelElement.classList.add('button-label');
-  labelElement.textContent = button.label;
-
-  buttonContent.appendChild(imgElement);
-  buttonContent.appendChild(labelElement);
-  buttonElement.appendChild(buttonContent);
   container.appendChild(buttonElement);
+
+  button.audio = new Audio(button.soundSrc);
+  button.audio.preload = 'auto';
 });
 
-function playSound(soundSrc) {
-  const audio = new Audio(soundSrc);
-  audio.play();
+function playSound(button) {
+  button.audio.currentTime = 0;
+  button.audio.play();
 }
-
-window.addEventListener("load", function() {
+ 
+window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });

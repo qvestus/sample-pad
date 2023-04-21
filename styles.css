@@ -1,17 +1,17 @@
 :root {
     --bg-image: url("images/background1.png");
-  }
+}
   
-  body {
+body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #000000;
-  }
+}
   
-  .background {
+.background {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,18 +23,17 @@
     background-position: center center;
     opacity: 0;
     transition: opacity 0.7s ease;
-  }
+}
   
-  body.loaded .background {
+body.loaded .background {
     opacity: 1;
-  }
+}
   
-  @media (min-width: 800px) {
+@media (min-width: 800px) {
     .background {
-      background-size: auto;
+        background-size: auto;
     }
-  }
-  
+}
 
 header {
     position: absolute;
@@ -43,16 +42,16 @@ header {
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
-  }
+}
   
-  .title {
+.title {
     font-size: 2.8rem;
     color: #fff;
     text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
     margin-bottom: 1rem;
-  }
+}
   
-  .intro {
+.intro {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 400;
@@ -63,7 +62,7 @@ header {
     line-height: 1.3rem;
     max-width: 600px;
     margin: 0 auto;
-  }
+}
   
 .container {
     display: grid;
@@ -95,67 +94,71 @@ header {
     padding: 0;
     padding-bottom: 8px;
     min-height: 60px;
+}
+
+.button-initial {
     animation: button-appear 0.4s ease-out forwards;
     opacity: 0;
 }
 
 @keyframes button-appear {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  .button:nth-child(1) {
+}
+
+.button:nth-child(1) {
     animation-delay: 0.05s;
-  }
-  
-  .button:nth-child(2) {
+}
+
+.button:nth-child(2) {
     animation-delay: 0.1s;
-  }
-  
-  .button:nth-child(3) {
+}
+
+.button:nth-child(3) {
     animation-delay: 0.15s;
-  }
-  
-  .button:nth-child(4) {
+}
+
+.button:nth-child(4) {
     animation-delay: 0.2s;
-  }
+}
   
-  .button:nth-child(5) {
+.button:nth-child(5) {
     animation-delay: 0.25s;
-  }
+}
   
-  .button:nth-child(6) {
+.button:nth-child(6) {
     animation-delay: 0.3s;
-  }
+}
   
-  .button:nth-child(7) {
+.button:nth-child(7) {
     animation-delay: 0.35s;
-  }
+}
   
-  .button:nth-child(8) {
+.button:nth-child(8) {
     animation-delay: 0.4s;
-  }
+}
   
-  .button:nth-child(9) {
+.button:nth-child(9) {
     animation-delay: 0.45s;
-  }
+}
   
-  .button:nth-child(10) {
+.button:nth-child(10) {
     animation-delay: 0.5s;
-  }
+}
   
-  .button:nth-child(11) {
+.button:nth-child(11) {
     animation-delay: 0.55s;
-  }
+}
   
-  .button:nth-child(12) {
+.button:nth-child(12) {
     animation-delay: 0.6s;
-  }
+}
 
 .button img {
     position: absolute;
@@ -171,7 +174,6 @@ header {
     position: relative;
     z-index: 1;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-    /*background-color: rgba(0, 0, 0, 0.25);*/
 }
 
 .button-label::before {
@@ -183,7 +185,6 @@ header {
 
 .button:hover img {
     transform: scale(1.1);
-
 }
 
 .button:active {
@@ -193,4 +194,23 @@ header {
 
 .button:focus {
     outline: none;
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.button.wiggle {
+    animation: wiggle 0.2s ease-in-out infinite;
 }

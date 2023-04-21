@@ -28,3 +28,7 @@ function playSound(soundSrc) {
   const audio = new Audio(soundSrc);
   audio.play();
 }
+
+window.addEventListener("load", function() {
+  document.body.classList.add("loaded");
+});

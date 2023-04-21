@@ -4,18 +4,33 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
-    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)), url("images/background1.png");
+    background-color: #000000;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("images/background1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-@media (min-width: 800px) {
-    body {
-        background-size: auto;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+  
+  body.loaded .background {
+    opacity: 1;
+  }
+  
+  @media (min-width: 800px) {
+    .background {
+      background-size: auto;
     }
-}
+  }
+  
 
 header {
     position: absolute;
@@ -76,7 +91,68 @@ header {
     padding: 0;
     padding-bottom: 8px;
     min-height: 60px;
+    animation: button-appear 0.3s ease-out forwards;
+    opacity: 0;
 }
+
+@keyframes button-appear {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .button:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+  
+  .button:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .button:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+  
+  /* Add styles for the remaining buttons here */
+  .button:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+  
+  .button:nth-child(5) {
+    animation-delay: 0.25s;
+  }
+  
+  .button:nth-child(6) {
+    animation-delay: 0.3s;
+  }
+  
+  .button:nth-child(7) {
+    animation-delay: 0.35s;
+  }
+  
+  .button:nth-child(8) {
+    animation-delay: 0.4s;
+  }
+  
+  .button:nth-child(9) {
+    animation-delay: 0.45s;
+  }
+  
+  .button:nth-child(10) {
+    animation-delay: 0.5s;
+  }
+  
+  .button:nth-child(11) {
+    animation-delay: 0.55s;
+  }
+  
+  .button:nth-child(12) {
+    animation-delay: 0.6s;
+  }
 
 .button img {
     position: absolute;

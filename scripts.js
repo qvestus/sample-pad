@@ -23,7 +23,6 @@ buttonData.forEach((button) => {
 });
 
 function playSound(button, buttonElement) {
-  button.audio.currentTime = 0;
   button.audio.play();
 
   buttonElement.classList.remove('button-initial');

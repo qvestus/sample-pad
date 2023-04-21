@@ -80,6 +80,7 @@ header {
     justify-content: flex-end;
     border: none;
     color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -91,7 +92,7 @@ header {
     padding: 0;
     padding-bottom: 8px;
     min-height: 60px;
-    animation: button-appear 0.3s ease-out forwards;
+    animation: button-appear 0.4s ease-out forwards;
     opacity: 0;
 }
 
@@ -117,7 +118,6 @@ header {
     animation-delay: 0.15s;
   }
   
-  /* Add styles for the remaining buttons here */
   .button:nth-child(4) {
     animation-delay: 0.2s;
   }
@@ -175,7 +175,7 @@ header {
     content: '';
     display: block;
     height: 100%;
-    margin-bottom: -8px;
+    margin-bottom: -12px;
 }
 
 .button:hover img {
